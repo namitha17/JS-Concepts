@@ -23,9 +23,6 @@ module.exports = function(opts) {
   });
 
   site.listen(opts.port);
-
-  fs.readFile(opts.baseDir + 'help.txt', 'utf-8', function(err, f) {
-    console.log(f.replace('{{port}}', opts.port));
-    console.log("\n\nServing at http://localhost:" + opts.port);
-  });
+    
+  console.log("\n\nServing at http://localhost:" + opts.port);
 };
